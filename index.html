@@ -9,16 +9,17 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
 
     <title>Welcome To Scaventure</title>
   </head>
-  <body>
+  <body style="background: img/jon-flobrant-193464-unsplash.jpg;" >
     <div class="jumbotron jumbotron-fluid container container-fluid">
       <h1 class="display-4" style="text-align: center;">Welcome To Scaventure</h1>
       <p class="lead" style="text-align: center;"> Your stress-relieving adventure </p>
       <hr class="my-4">
 
-      <div class="pure-menu pure-menu-horizontal">
+      <div class="pure-menu pure-menu-horizontal container-fluid container">
           <a href="#home" class="pure-menu-heading pure-menu-link">Home</a>
         <ul class="pure-menu-list">
           <li class="pure-menu-item"><a href="#rules" class="pure-menu-link">Rules & Regulation</a></li>
@@ -27,11 +28,11 @@
         </ul>
       </div>
   <br>
-  <div class="carousel slide" data-ride="carousel">
+  <div id="move"class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      <li data-target="#move" data-slide-to="0" class="active"></li>
+      <li data-target="#move" data-slide-to="1"></li>
+      <li data-target="#move" data-slide-to="2"></li>
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -44,21 +45,60 @@
         <img class="d-block w-100" src="img/zach-inglis-96275-unsplash.jpg" alt="THIR">
       </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <a class="carousel-control-prev" href="#move" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+  <a class="carousel-control-next" href="#move" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-  </div id="Home">
+  <br>
   </div>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Holy Smoaks!!</strong> Are you even ready for this?.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+    </div>
+  </div>
+
+  <div class="container">
+  <div class="row">
+  <div class="col-sm">
+    <div class="max-w-md rounded overflow-hidden shadow-lg">
+    <img class="w-full" src="https://tailwindcss.com/img/card-top.jpg" alt="Sunset in the mountains">
+    <div class="px-6 py-4">
+      <div class="font-bold text-xl mb-2">#location</div>
+      <p class="text-grey-darker text-base">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+      </p>
+    </div>
+  </div>
+  </div>
+
+  <div class="col-sm">
+    <div class="max-w-md rounded overflow-hidden shadow-lg">
+    <img class="w-full" src="https://tailwindcss.com/img/card-top.jpg" alt="Sunset in the mountains">
+    <div class="px-6 py-4">
+      <div class="font-bold text-xl mb-2">#location</div>
+      <p class="text-grey-darker text-base">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+      </p>
+    </div>
+
+    </div>
+  </div>
+</div>
+</div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<p style=" margin-top: 3em;
+  font-size: 14px;
+text-align: center;"> Made with ♥. </p>
   </body>
 </html>
