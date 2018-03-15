@@ -2,7 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, initial-scale=1.0, user-scalable=no">
+    <style>
+    #map {
+      height: 100%;
+    }
+    </style>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -10,7 +15,9 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
 
     <title>Welcome To Scaventure</title>
+
   </head>
+
   <body style="background: img/jon-flobrant-193464-unsplash.jpg;" >
     <div class="jumbotron jumbotron-fluid container container-fluid">
       <h1 class="display-4" style="text-align: center;">Welcome To Scaventure</h1>
@@ -27,7 +34,16 @@
     <br>
     <img class="d-block w-100" src="img/todd-quackenbush-47562-unsplash.jpg" alt="FIR">
   </div>
-
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <p>location information</p>
+    </div>
+    <div class="col-8" class="height: 100%;">
+      <!-- JavaScript code on google maps API  -->
+    </div>
+  </div>
+</div>
   <div class="container">
     <div class="row">
       <div class="col-sm">
@@ -55,7 +71,27 @@
       </div>
     </div>
 </div>
+<!-- Figure out why is it not showing up in the div or otherwise 
+<div id="map"></div>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-OQ-PlDlDRRC92kCFTuBn-Gb2b5YSUU4&callback=initMap">  </script>
+<script>
 
+  function initMap() {
+    var myLatLng = {lat: 40.705576 , lng: -74.013421};
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 4,
+      center: myLatLng
+    });
+
+    var marker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      title: 'Charging Bull'
+    });
+  }
+</script>
+ -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
