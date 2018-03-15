@@ -31,74 +31,40 @@
           <li class="pure-menu-item"><a href="#about" class="pure-menu-link">About us</a></li>
         </ul>
       </div>
-    <br>
-    <img class="d-block w-100" src="img/todd-quackenbush-47562-unsplash.jpg" alt="FIR">
-  </div>
-<div class="container">
-  <div class="row">
-    <div class="col-4">
-      <p>location information</p>
+      <br>
+      <img class="d-block w-100" src="img/todd-quackenbush-47562-unsplash.jpg" alt="FIR">
     </div>
-    <div class="col-8" class="height: 100%;">
-      <!-- JavaScript code on google maps API  -->
-    </div>
-  </div>
-</div>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm">
-        <div class="max-w-md rounded overflow-hidden shadow-lg">
-          <img class="w-full" src="https://tailwindcss.com/img/card-top.jpg" alt="Sunset in the mountains">
-        <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2">#location</div>
-          <p class="text-grey-darker text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-          </p>
-        </div>
-      </div>
-      </div>
-
-      <div class="col-sm">
-        <div class="max-w-md rounded overflow-hidden shadow-lg">
-          <img class="w-full" src="https://tailwindcss.com/img/card-top.jpg" alt="Sunset in the mountains">
-          <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2">#location</div>
-            <p class="text-grey-darker text-base">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-            </p>
-          </div>
-        </div>
+    <div class="container">
+      <div class="row">
+        <div id="map"></div>
       </div>
     </div>
-</div>
-<!-- Figure out why is it not showing up in the div or otherwise 
-<div id="map"></div>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-OQ-PlDlDRRC92kCFTuBn-Gb2b5YSUU4&callback=initMap">  </script>
-<script>
 
-  function initMap() {
-    var myLatLng = {lat: 40.705576 , lng: -74.013421};
-
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 4,
-      center: myLatLng
-    });
-
-    var marker = new google.maps.Marker({
-      position: myLatLng,
-      map: map,
-      title: 'Charging Bull'
-    });
-  }
-</script>
- -->
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-OQ-PlDlDRRC92kCFTuBn-Gb2b5YSUU4&callback=initMap"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<p style=" margin-top: 3em;
-  font-size: 14px;
-text-align: center;"> Made with ♥. </p>
+    <script>
+
+        function initMap() {
+          var myLatLng = { lat: 40.705576 , lng: -74.013421 };
+
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 4,
+            center: myLatLng
+          });
+
+          var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Charging Bull'
+          });
+        }
+      </script>
+
+
+    <p style=" margin-top: 3em;
+      font-size: 14px;
+    text-align: center;"> Made with ♥. </p>
   </body>
 </html>
