@@ -63,7 +63,7 @@
 
         function initMap() {
           var myLatLng ={ lat: 40.705576 , lng: -74.013421 };
-          //var canal = { lat: 40.72520 , lng: -74.01024 };
+          var canal = { lat: 40.72520 , lng: -74.01024 };
 
           var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 12,
@@ -72,6 +72,11 @@
 
           var marker = new google.maps.Marker({
             position: myLatLng,
+            map: map,
+            title: 'locations pins'
+          });
+          var marker2 = new google.maps.Marker({
+            position: canal,
             map: map,
             title: 'locations pins'
           });
