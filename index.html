@@ -12,6 +12,117 @@
     html, body {
       height: 100%;
     }
+    .carousel {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 140px;
+      height: 97px;
+      margin-left: -70px;
+      margin-top: -48.5px;
+      transform-style: preserve-3d;
+      -webkit-transform: rotateX(-5deg) rotateY(0);
+      -ms-transform: rotateX(-5deg) rotateY(0);
+      transform: rotateX(-5deg) rotateY(0);
+      -webkit-animation: turn 20s infinite linear;
+      -moz-animation: turn 20s infinite linear;
+      -o-animation: turn 20s infinite linear;
+      animation: turn 20s infinite linear;
+    }
+    .carousel .slide {
+      position: absolute;
+      width: 140px;
+      height: 97px;
+      border-radius: 8px;
+      box-shadow: 0 0 4px 1px #fff;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    .carousel .slide:nth-child(1) {
+  -webkit-transform: rotateY(0deg) translateZ(196px);
+  -ms-transform: rotateY(0deg) translateZ(196px);
+  transform: rotateY(0deg) translateZ(196px);
+  }
+  .carousel .slide:nth-child(2) {
+  -webkit-transform: rotateY(51.42857deg) translateZ(196px);
+  -ms-transform: rotateY(51.42857deg) translateZ(196px);
+  transform: rotateY(51.42857deg) translateZ(196px);
+}
+  .carousel .slide:nth-child(3) {
+  -webkit-transform: rotateY(102.85714deg) translateZ(196px);
+  -ms-transform: rotateY(102.85714deg) translateZ(196px);
+  transform: rotateY(102.85714deg) translateZ(196px);
+}
+  .carousel .slide:nth-child(4) {
+  -webkit-transform: rotateY(154.28571deg) translateZ(196px);
+  -ms-transform: rotateY(154.28571deg) translateZ(196px);
+  transform: rotateY(154.28571deg) translateZ(196px);
+}
+  .carousel .slide:nth-child(5) {
+    -webkit-transform: rotateY(205.71429deg) translateZ(196px);
+    -ms-transform: rotateY(205.71429deg) translateZ(196px);
+    transform: rotateY(205.71429deg) translateZ(196px);
+  }
+  .carousel .slide:nth-child(6) {
+  -webkit-transform: rotateY(257.14286deg) translateZ(196px);
+  -ms-transform: rotateY(257.14286deg) translateZ(196px);
+  transform: rotateY(257.14286deg) translateZ(196px);
+}
+  .carousel .slide:nth-child(7) {
+  -webkit-transform: rotateY(308.57143deg) translateZ(196px);
+  -ms-transform: rotateY(308.57143deg) translateZ(196px);
+  transform: rotateY(308.57143deg) translateZ(196px);
+}
+@-webkit-keyframes
+turn {  50% {
+  -webkit-transform: rotateX(5deg) rotateY(0.5turn);
+  -ms-transform: rotateX(5deg) rotateY(0.5turn);
+  transform: rotateX(5deg) rotateY(0.5turn);
+}
+100% {
+-webkit-transform: rotateX(-5deg) rotateY(1turn);
+-ms-transform: rotateX(-5deg) rotateY(1turn);
+transform: rotateX(-5deg) rotateY(1turn);
+}
+}
+@-moz-keyframes
+turn {  50% {
+-webkit-transform: rotateX(5deg) rotateY(0.5turn);
+-ms-transform: rotateX(5deg) rotateY(0.5turn);
+transform: rotateX(5deg) rotateY(0.5turn);
+}
+100% {
+-webkit-transform: rotateX(-5deg) rotateY(1turn);
+-ms-transform: rotateX(-5deg) rotateY(1turn);
+transform: rotateX(-5deg) rotateY(1turn);
+}
+}
+@-o-keyframes
+turn {  50% {
+-webkit-transform: rotateX(5deg) rotateY(0.5turn);
+-ms-transform: rotateX(5deg) rotateY(0.5turn);
+transform: rotateX(5deg) rotateY(0.5turn);
+}
+100% {
+-webkit-transform: rotateX(-5deg) rotateY(1turn);
+-ms-transform: rotateX(-5deg) rotateY(1turn);
+transform: rotateX(-5deg) rotateY(1turn);
+}
+}
+@keyframes
+turn {  50% {
+-webkit-transform: rotateX(5deg) rotateY(0.5turn);
+-ms-transform: rotateX(5deg) rotateY(0.5turn);
+transform: rotateX(5deg) rotateY(0.5turn);
+}
+100% {
+-webkit-transform: rotateX(-5deg) rotateY(1turn);
+-ms-transform: rotateX(-5deg) rotateY(1turn);
+transform: rotateX(-5deg) rotateY(1turn);
+}
+}
     </style>
 
     <!-- Bootstrap CSS -->
@@ -37,7 +148,20 @@
         </ul>
       </div>
       <br>
-      <img class="d-block w-100" src="img/todd-quackenbush-47562-unsplash.jpg" alt="FIR">
+
+    <img class="d-block w-100" src="img/IMG_2634.jpeg" alt="FIR">
+
+      <div class="container" style="padding-down: 100px;">
+        <div class="carousel">
+      	  <img class="slide" draggable="false" src="img/IMG_2630.jpeg"/>
+      	  <img class="slide" draggable="false" src="img/IMG_2635.jpeg"/>
+      	  <img class="slide" draggable="false" src="img/IMG_2632.jpeg"/>
+      	  <img class="slide" draggable="false" src="img/IMG_2636.jpeg"/>
+      	  <img class="slide" draggable="false" src="img/IMG_2634.jpeg"/>
+          <img class="slide" draggable="false" src="img/IMG_2305.jpeg"/>
+          <img class="slide" draggable="false" src="img/IMG_2607.jpeg"/>
+      	</div>
+      </div>
     </div>
   <div class="container">
     <div class="max-w-md w-full lg:flex" style="text-align: center; padding: 10%;">
@@ -61,28 +185,31 @@
     <div id="map" ></div>
       <script>
 
-        function initMap() {
-          var myLatLng ={ lat: 40.705576 , lng: -74.013421 };
-          var canal = { lat: 40.72520 , lng: -74.01024 };
+            function initMap() {
 
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 12,
-            center: myLatLng
-          });
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 11,
+                center: { lat: 40.705576 , lng: -74.013421 }
+              });
 
-          var marker = new google.maps.Marker({
-            position: myLatLng,
-            map: map,
-            title: 'locations pins'
-          });
-          var marker2 = new google.maps.Marker({
-            position: canal,
-            map: map,
-            title: 'locations pins'
-          });
-        }
+              var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+              var markers = locations.map(function(location, i) {
+                return new google.maps.Marker({
+                  position: location,
+                  label: labels[i % labels.length]
+                });
+              });
+
+              var markerCluster = new MarkerClusterer(map, markers,
+                  {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+            }
+            var locations = [
+              { lat: 40.705576 , lng: -74.013421 },
+              { lat: 40.72520 , lng: -74.01024 }
+            ]
       </script>
-
+      <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
       <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-OQ-PlDlDRRC92kCFTuBn-Gb2b5YSUU4&callback=initMap"></script>
 
       <div class="max-w-md w-full lg:flex" style="text-align: center; padding: 10%;">
@@ -100,7 +227,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-      <img class="d-block w-100" src="img/troy-jarrell-57101-unsplash.jpg" alt="SEC">
+      <img class="d-block w-100" src="img/IMG_2632.jpeg" alt="SEC">
 
       <div class="container-fluid">
         <div class="max-w-md w-full lg:flex" style="text-align: center; padding: 10%;">
